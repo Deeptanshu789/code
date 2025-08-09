@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+      float bp, mp, sp, profit_loss, discount, profitp, lossp;
+      printf("Enter buying price:");
+      scanf("%f", &bp);
+      printf("Enter marked price:");
+      scanf("%f", &mp);
+      printf("Enter discount percentage:");
+      scanf("%f", &discount);
+      sp = mp - (mp * discount/100);
+      profit_loss = sp - bp;
+      profitp = (profit_loss / bp ) * 100;
+      lossp = (profit_loss / sp ) * 100;
+	(profit_loss > 0) ?
+		(printf("Profit: %.2f\nProfit Percentage: %.2f%%\n", profit_loss, profitp)) :
+		(profit_loss < 0 ?
+			printf("Loss: %.2f\nLoss Percentage: %.2f%%\n", -profit_loss, lossp) :
+			printf("No profit, no loss.\n")
+		);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+}
